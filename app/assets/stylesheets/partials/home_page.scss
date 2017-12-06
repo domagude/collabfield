@@ -1,0 +1,104 @@
+.page-name {
+  margin: 15px 0px 15px 0px;
+  text-align: center;
+  background-color: white !important;
+  font-weight: bold;
+  a {
+    color: black;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.contact {
+  margin-top: 5px;
+  a {
+    display: block;
+    width: 100%;
+    height: 35px;
+    vertical-align: middle;
+    line-height: 35px;
+    padding-left: 10px;
+    transition: padding 0.1s;
+    &:hover {
+      background-color: rgb(250, 250, 250);
+      padding-left: 15px;
+    }
+  }
+}
+
+.login-button-index {
+  padding: 5px 10px;
+  border-radius: 10px;
+  &:hover, &:active, &:visited, &:link {
+    color: white;
+  }
+}
+
+.login-button, .login-button-index, .sign-up-button  {
+  background-color: $navbarColor;
+  color: white !important;
+}
+
+.non-signed-in-message {
+  text-align: center;
+  padding: 10px;
+}
+
+#main-content {
+  background: white;
+  min-height: 800px;
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+
+#side-menu {
+  padding: 0;
+  #links-list {
+    margin-top: 20px;
+    padding: 0;
+    font-size: 14px;
+    font-size: 1.4rem;
+    a {
+      display: block;
+      padding: 5px 15px;
+      margin: 2px 0;
+    }
+    li {
+      min-width: 195px;
+      max-width: 195px;
+    }
+    li, li a {
+      color: black;
+      text-decoration: none;
+    }
+    li:hover {
+      border-radius: 50px;
+      background: $navbarColor;
+    }
+    li:hover a, li:hover i {
+      color: white;
+    }
+  }
+}
+
+#three-cols {
+  padding: 0;
+}
+
+#contacts {
+  h4 {
+    text-align: center;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    color: black;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+}

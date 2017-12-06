@@ -1,0 +1,17 @@
+<% recipient = private_conv_recipient(conversation) %>
+<% seen_status = private_conv_seen_status(conversation) %>
+<li id="menu-pc<%= conversation.id %>" 
+    class="<%= seen_status %>"
+    data-id="<%= conversation.id %>"
+    data-type="private">
+    <%= link_to recipient.name, 
+                open_private_conversation_path(id: conversation.id), 
+                remote: true, 
+                method: :post,
+                class: 'bigger-screen-link' %>
+    <%= link_to recipient.name, 
+            open_messenger_path(id: recipient.id, 
+                                smaller_device: true, 
+                                type: 'private'), 
+            class: 'smaller-screen-link' %>            
+</li>

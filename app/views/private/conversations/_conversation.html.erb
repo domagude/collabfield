@@ -1,0 +1,22 @@
+<% @recipient = private_conv_recipient(conversation) %>
+<% @contact = get_contact_record(@recipient) %>
+<% @is_messenger = false %>
+<li class="conversation-window" 
+    id="pc<%= conversation.id %>" 
+    data-pconversation-user-name="<%= @recipient.name %>" 
+    data-turbolinks-permanent>
+  <div class="panel panel-default" data-pconversation-id="<%= conversation.id %>">
+    <%= render 'private/conversations/conversation/heading', 
+                conversation: conversation %>
+
+    <!-- Conversation window's content -->
+    <div class="panel-body">
+      <%= render 'private/conversations/conversation/request_status' %>
+      <%= render 'private/conversations/conversation/messages_list', 
+                  conversation: conversation %>
+      <%= render 'private/conversations/conversation/new_message_form', 
+                  conversation: conversation,
+                  user: user %>
+    </div><!-- panel-body -->
+  </div>
+</li><!-- conversation-window -->

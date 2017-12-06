@@ -1,0 +1,28 @@
+<div id="branch-main-content" class="container">
+  <div class="row">
+    <h1 class="page-title"><%= page_title %></h1>
+    <%= render 'posts/branch/create_new_post', branch: branch %>
+  </div><!-- row -->
+
+  <div class="row">
+    <%= render  'posts/branch/search_form', 
+                branch: branch,
+                search_placeholder: search_placeholder %>
+  </div><!-- row -->
+
+  <div class="row">
+    <%= render 'posts/branch/categories', branch: branch %>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12" id="feed">
+      <%= render @posts %>
+      <%= render no_posts_partial_path(@posts) %>			
+    </div>
+  </div><!-- row -->	
+  
+  <div class="infinite-scroll">
+    <%= will_paginate @posts %>
+  </div>
+</div><!-- container -->
+

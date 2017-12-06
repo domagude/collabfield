@@ -1,0 +1,6 @@
+<%= link_to "Load messages", 
+            private_messages_path(:conversation_id => conversation.id, 
+                                  :messages_to_display_offset => @messages_to_display_offset,
+                                  :is_messenger => @is_messenger),
+            class: 'load-more-messages', 
+            remote: true %>

@@ -1,0 +1,23 @@
+<div class="container-fluid messenger">
+  <div class="row">
+    <div class="col-sm-2">
+      <ul>
+      </ul>
+    </div>
+    <div class="col-sm-10">
+      <div class="conversation">
+        <%= render partial: "messengers/#{@type}_conversation",
+                      locals: { conversation: @conversation, 
+                                user: current_user } %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('body nav').hide();
+  $('.messenger .col-sm-2').hide();
+  $('.messenger .col-sm-10').show();
+  $('body').css('margin', '0 0 0 0');
+  $('.messenger').css('height', '100vh');
+</script>

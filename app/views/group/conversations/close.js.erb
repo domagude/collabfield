@@ -1,0 +1,5 @@
+$('body').find("[data-gconversation-id='" + "<%= @conversation.id %>" + "']")
+    .parent()
+    .remove();
+positionChatWindows();
+

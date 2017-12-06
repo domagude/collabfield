@@ -1,0 +1,4 @@
+var scrollbar_visible = $('.conversation .messages-list').scrollTop();
+if (scrollbar_visible == 0) {
+    $('.conversation .messages-list .load-more-messages').click();
+}

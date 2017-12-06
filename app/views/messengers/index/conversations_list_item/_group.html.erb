@@ -1,0 +1,6 @@
+<% seen_status = group_conv_seen_status(conversation, current_user) %>
+<li id="menu-gc<%= conversation.id %>" class="<%= @seen_by_user %>">
+    <%= link_to conversation.name, 
+                get_group_conversation_path(group_conversation_id: conversation.id), 
+                remote: true %>
+</li>

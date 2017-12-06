@@ -1,0 +1,18 @@
+<div class="panel-heading conversation-heading">
+  <%= truncate(conversation.name, :length => 40) %>
+</div>
+
+<!-- Close the conversation button -->
+<%= link_to "X", 
+            close_group_conversation_path(conversation), 
+            class: 'close-conversation', 
+            title: 'Close', 
+            remote: true, 
+            method: :post %>
+
+<!-- Add more contacts to the conversation button -->
+<div class="add-people-to-chat" title="Add people to chat">
+  <div>
+    <i class="fa fa-plus" aria-hidden="true" data-toggle="dropdown"></i>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+@media screen and (min-width: 767px) {
+  // scrollbar styling
+  ::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    // border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+  ::-webkit-scrollbar
+  {
+    width: 12px;
+    background-color: #F5F5F5;
+  }
+  ::-webkit-scrollbar-thumb
+  {
+    // border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: $navbarColor;
+  }
+  body nav {
+    display: initial !important;
+  }
+  .smaller-screen-link {
+    display: none !important;
+  }
+  .brand-mobile {
+    display: none;
+  }
+  .mobile-menu {
+    display: none !important;
+  }
+  #conversations-menu, #contacts-requests {
+    ul {
+      width: 400px;
+      top: 0;
+    }
+  }
+  .messenger {
+    .col-sm-2 {
+      display: initial !important;
+    }
+    .col-sm-2, .col-sm-10 {
+      display: initial;
+    }
+    .conversation {
+      padding: 0 0 60px 0;
+      .conversation-details {
+        display: none;
+      }
+    }
+  }
+}

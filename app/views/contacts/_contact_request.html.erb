@@ -1,0 +1,19 @@
+<li class="contact-request" data-user-name="<%= sender.name %>">
+  <div class="sixty-percent">
+    <span class="contact-name"><%= sender.name %></span> 
+  </div>
+  <div class="forty-percent">
+    <span class="accept-request">
+      <%= link_to "Accept",  
+                  contact_path(id: sender.id), 
+                  remote: true, 
+                  method: "put" %>
+    </span> 
+    <span class="decline-request">
+      <%= link_to "Decline",
+                  contact_path(id: sender.id), 
+                  remote: true, 
+                  method: :delete %>
+    </span>
+  </div>
+</li>

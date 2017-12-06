@@ -1,0 +1,140 @@
+@media screen and (max-width: 380px) {
+  .navbar-header {
+    #conversations-menu {
+      width: 30%;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .forty-percent, .sixty-percent {
+    width: auto !important;
+  }
+  .page-title {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+  .new-post-button-parent {
+    text-align: center;
+    span {
+      display: none !important;
+    }
+  }
+  .post-button {
+    padding: 5px;
+  }
+  .category-item {
+    a {
+      padding: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .col-sm-10 {
+    display: none;
+    padding: 0 !important;
+    .conversation {
+      padding: 50px 0 0 0;
+    }
+    .private-conversation .messages-list {
+      width: 100%;
+      right: 0;
+    }
+    .group-conversation .messages-list {
+      width: 100%;
+      left: 0;
+    }
+    .send-private-message, .send-group-message {
+      position: fixed;
+      bottom: 0;
+    }
+  }
+  .pc-menu {
+    display: none !important;
+  }
+  .single-post-list {
+    min-height: 65px;
+    max-height: 65px;
+    padding: 10px 0;
+  }
+  .bigger-screen-link, .brand-bigger-screen {
+    display: none !important;
+  }
+  .smaller-screen-link {
+    padding: 10px 20px !important;
+  }
+  .conversation-window {
+    display: none !important;
+  }
+  .navbar-brand {
+    margin: 0 !important;
+  }
+  .mobile-menu {
+    i {
+      color: white;
+    }
+    ul {
+      padding: 0px;
+    }
+    a {
+      display: block;
+      padding: 10px 0px 10px 25px !important;
+    }
+    a:hover {
+      background: white !important;
+      color: black !important;
+      i {
+        color: black;
+      }
+    }
+  }
+  .navbar-header {
+    #conversations-menu, #messages-page-name {
+      a {
+        float: left;
+      }
+      ul {
+        position: absolute;
+        left: 0;
+        width: 100%;
+      }
+    }
+    #conversations-menu {
+      width: 40%;
+    }
+    #messages-page-name  {
+      width: 50%;
+    }
+    #contacts-requests {
+      ul {
+        position: absolute;
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+  #side-menu {
+    display: none !important;
+  }
+  #feed {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width:767px) and (max-width: 1000px) {
+  .container {
+     width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .solid-color-mode, .border-color-mode {
+    .post-text {
+      font-size: 16px;  
+    }
+  }
+}
+
+
+

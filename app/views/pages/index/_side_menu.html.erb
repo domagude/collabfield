@@ -1,0 +1,7 @@
+<div id="side-menu" class="col-sm-3">
+  <ul id="links-list">
+    <%= render 'pages/index/side_menu/no_login_required_links' %>
+    <%= render login_required_links_partial_path %>
+  </ul>
+  <%= render contacts_list_partial_path %>
+</div><!-- side-menu -->

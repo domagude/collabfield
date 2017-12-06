@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: $backgroundColor;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+h1 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+i {
+  width: 26px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:hover, a:active, a:link, a:visited {
+  text-decoration: none;
+}
+
+.control-label {
+  display: none;
+}
+
+.login-button, .sign-up-button {
+  background-color: $navbarColor;
+  color: white !important;
+}
+
+.container {
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}

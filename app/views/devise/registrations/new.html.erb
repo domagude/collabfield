@@ -1,0 +1,28 @@
+<div class="container" id="sign-up-form">
+  <div class="row">
+    <h1>Get in touch with like-minded people</h1>
+    <h3>Create, study, accomplish goals together</h3>
+
+    <div class="col-sm-offset-4 col-sm-4">
+      <h3>Sign up <small>it's free!</small></h3> 
+
+        <%= bootstrap_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+
+        <%= f.text_field :name, 
+	                       placeholder: 'username (will be shown publicly)', 
+	                       class: 'form-control' %>
+        <%= f.text_field :email, 
+	                       placeholder: 'email', 
+	                       class: 'form-control' %>
+        <%= f.password_field :password, 
+                              placeholder: 'password', 
+                              class: 'form-control' %>
+        <%= f.password_field :password_confirmation, 
+                              placeholder: 'password confirmation', 
+                              class: 'form-control' %>
+        <%= f.submit 'Sign up', class: 'btn sign-up-button' %>
+      <% end %>
+		
+    </div>
+  </div>
+</div>

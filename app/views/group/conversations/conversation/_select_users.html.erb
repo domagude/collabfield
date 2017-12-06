@@ -1,0 +1,15 @@
+<div class="select-users-to-chat">
+  <%= form_tag  group_conversation_path(conversation), 
+                method: 'put', 
+                class: 'form-group' do %>
+    <%= hidden_field_tag :added_by, current_user.id %>
+    <%= collection_select(:user, 
+                          :id, 
+                          add_people_to_conv_list, 
+                          :id, 
+                          :name, 
+                          {}, 
+                          {:class=>'form-control select-users-dropdown'}) %>
+    <%= submit_tag 'Add the user', class: 'form-control select-users-button' %>
+  <% end %>
+</div>

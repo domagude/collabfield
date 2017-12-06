@@ -1,0 +1,9 @@
+// temporary remove the load more messages link 
+// so it cannot be clicked if new messages aren't rendered yet
+$('body .conversation .messages-list .load-more-messages')
+    .replaceWith('<span class="load-more-messages"></span>');
+// render previous messages
+$('body .conversation .messages-list ul')
+	.prepend('<%= j render "#{@type}/conversations/messages" %>');
+// after new messages are appended, leave a gap at the top of the scrollbar
+$('body .conversation .messages-list').scrollTop(400);

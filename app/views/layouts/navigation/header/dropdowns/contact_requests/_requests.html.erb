@@ -1,0 +1,9 @@
+<% current_user.pending_received_contact_requests.each do |user| %>
+  <%= render partial: "layouts/"\
+                      "navigation/"\
+                      "header/"\
+                      "dropdowns/"\
+                      "contact_requests/"\
+                      "request", 
+             locals: { user: user } %>
+<% end %>

@@ -1,0 +1,37 @@
+.modal-content {
+  h3 {
+    text-align: center;
+  }
+  p {
+    margin: 50px 0;
+  }
+  .posted-by {
+    color: rgba(0,0,0,0.5);
+  }
+}
+
+.modal-content {
+  .loaded-data {
+    h3, p {
+      overflow: hidden;
+    }
+    padding: 0 10px;
+    .posted-by {
+      margin: 0;
+    }
+  }
+}
+
+.interested {
+  text-align: center;
+  a {
+    background-color: $navbarColor;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}

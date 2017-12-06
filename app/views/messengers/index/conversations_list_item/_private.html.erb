@@ -1,0 +1,7 @@
+<% recipient = private_conv_recipient(conversation) %>
+<% seen_status = private_conv_seen_status(conversation) %>
+<li id="menu-pc<%= conversation.id %>" class="<%= seen_status %>">
+  <%= link_to recipient.name, 
+              get_private_conversation_path(id: recipient.id), 
+              remote: true  %>
+</li>

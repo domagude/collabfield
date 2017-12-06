@@ -1,0 +1,8 @@
+<div class="col-sm-2">
+  <ul>
+    <% @all_conversations.each do |conversation| %>
+      <%= render partial: conversations_list_item_partial_path(conversation),
+                 locals: { conversation: conversation } %>
+    <% end %>
+  </ul>
+</div>

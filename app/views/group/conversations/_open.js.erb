@@ -1,0 +1,33 @@
+var conversation = $('body').find("[data-gconversation-id='" + 
+                                "<%= @conversation.id %>" + 
+                                "']");
+var chat_windows_count = $('.conversation-window').length + 1;
+
+
+if (conversation.length !== 1) {
+  $('body').append("<%= j(render 'group/conversations/conversation',\
+                                  conversation: @conversation,\
+                                  user: current_user) %>");
+  conversation = $('body').find("[data-gconversation-id='" + 
+                                "<%= @conversation.id %>" + 
+                                "']");
+}
+
+// Toggle conversation window after its creation
+$('.conversation-window:nth-of-type(' + chat_windows_count + ')\
+   .conversation-heading').click();
+// mark as seen by clicking it
+setTimeout(function(){ 
+  $('.conversation-window:nth-of-type(' + chat_windows_count + ')').click();
+ }, 1000);
+// focus textarea
+$('.conversation-window:nth-of-type(' + chat_windows_count + ')\
+   form\
+   textarea').focus();
+
+var messages_list = conversation.find('.messages-list');
+var height = messages_list[0].scrollHeight;
+messages_list.scrollTop(height);
+
+// repositions all conversation windows
+positionChatWindows();

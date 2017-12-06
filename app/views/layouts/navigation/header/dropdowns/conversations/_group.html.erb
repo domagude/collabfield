@@ -1,0 +1,12 @@
+<% seen_status = group_conv_seen_status(conversation, current_user) %>
+<li id="menu-gc<%= conversation.id %>" class="<%= seen_status %>">
+  <%= link_to truncate(conversation.name, :length => 40), 
+              open_group_conversation_path(id: conversation.id), 
+              remote: true, 
+              method: :post, 
+              class: 'bigger-screen-link' %>
+  <%= link_to truncate(conversation.name, :length => 40), 
+            open_messenger_path(group_conversation_id: conversation.id, 
+            smaller_device: true, type: 'group'), 
+            class: 'smaller-screen-link' %>            
+</li>

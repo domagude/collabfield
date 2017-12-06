@@ -1,0 +1,20 @@
+<!-- Add more contacts to chat button -->
+<div class="add-people-to-chat" title="Create a group chat">
+  <div>
+    <i class="fa fa-plus" aria-hidden="true" data-toggle="dropdown"></i>
+  </div>
+</div>
+<!-- select users to add to conversation -->
+<div class="select-users-to-chat">
+  <%= form_for(Group::Conversation.new, remote: true, class: 'form-group') do |f| %>
+    <%= hidden_field_tag :creator_id, current_user.id %>
+    <%= hidden_field_tag :private_conversation_id, conversation.id %>
+    <%= f.collection_select(:id, 
+                            contacts_except_recipient(@recipient), 
+                            :id, 
+                            :name, 
+                            {}, 
+                            {:class=>'form-control select-users-dropdown'}) %>
+    <%= f.submit 'Start a conversation', class: 'form-control select-users-button' %>
+  <% end %>
+</div>

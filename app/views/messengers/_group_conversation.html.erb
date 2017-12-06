@@ -1,0 +1,7 @@
+<% @is_messenger = true %>
+<%= render 'messengers/group_conversation/details', 
+            conversation: conversation %>
+<%= render 'group/conversations/conversation/messages_list', 
+            conversation: conversation %>
+<%= render 'messengers/group_conversation/new_message_form', 
+            conversation: conversation %>

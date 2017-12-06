@@ -1,0 +1,6 @@
+<%= link_to contacts_path(contact_id: @recipient), 
+            method: :post, 
+            remote: true, 
+            class: 'add-user-to-contacts add-user-to-contacts-notif' do %>
+  <i class="fa fa-user-plus" aria-hidden="true" title="Add to contacts"></i>
+<% end %>

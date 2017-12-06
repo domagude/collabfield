@@ -1,0 +1,235 @@
+body {
+	margin-top: 50px;
+}
+
+nav {
+  .col-sm-5, .col-sm-7 {
+    padding: 0;
+  }
+  .navbar-header {
+    width: 100%;
+    button, .navbar-brand {
+      transition: opacity 0.15s;
+    }
+    button {
+      margin-right: 0;
+    }
+    button:hover, .navbar-brand:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.navbar-default, .navbar-toggle:focus, .collapsed, button.navbar-toggle {
+  background: $navbarColor !important;
+	border: none;
+	a {
+	  color: white !important;
+	}
+}
+
+.navbar-toggle, .navbar-collapse {
+	border-color: $navbarColor !important;
+	box-shadow: none;
+}
+
+.navbar-brand {
+	margin: 0 0 0 10px !important;
+}
+
+.brand-mobile {
+  font-size: 20px;
+  font-size: 2.0rem;
+}
+
+.pc-menu {
+  margin-right: 10px;
+}
+
+.mobile-menu {
+  i {
+    color: white;
+  }
+  ul {
+    padding: 0px;
+  }
+  a {
+    display: block;
+    padding: 10px 0px 10px 25px !important;
+  }
+  a:hover {
+    background: white !important;
+    color: black !important;
+    i {
+      color: black;
+    }
+  }
+}
+
+.icon-bar {
+  background-color: white !important;
+}
+
+.active a {
+  background: $navbarColor !important;
+  border-bottom: solid 5px white;
+}
+
+.dropdown-toggle, .dropdown-menu {
+  background: $navbarColor !important;
+  border: none;
+}
+
+.dropdown-menu a:hover {
+  color: black !important;
+  background: white !important;
+}
+
+.navigation-items {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+.navbar-header {
+  .open {
+    width: 36px;
+  }
+}
+
+.non-user-nav-links {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+  padding-right: 20px;
+}
+
+#conversations-menu, #contacts-requests {
+  font-size: 20px;
+  font-size: 2.0rem;
+  height: 50px;
+  line-height: 50px;
+  padding-right: 10px;
+
+  ul {
+    margin: 0;
+    position: relative;
+    top: 50px;
+    right: 200px;
+    border-radius: 0 0 5px 5px;
+    height: 300px;
+    overflow: scroll;
+    overflow-x: hidden;
+    li {
+      a {
+        width: 100%;
+      }
+    }
+  }
+  .unseen-conv {
+    a {
+      background: $backgroundColor;
+      color: black !important;
+    }
+  }
+}
+
+#unseen-conversations, #unresponded-contact-requests {
+  visibility: hidden;
+  padding: 1px;
+  position: absolute;
+  // color: white;
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+
+#unseen-conversations {
+  right: 5px;
+  background: #E92F2F;
+}
+
+#conversations-menu {
+  i {
+    position: relative;
+  }
+}
+
+#conversations-list {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  .col-sm-2 {
+    padding: 0;
+  }
+}
+
+#contacts-requests {
+  li {
+    color: black;
+    background-color: $backgroundColor;
+    border-bottom: 1px solid $navbarColor;
+  }
+  i {
+    position: relative;
+  }
+  .sixty-percent {
+    display: inline-block;
+    width: 60%;
+  }
+  .forty-percent {
+    display: inline-block;
+    float: right;
+    width: 40%;
+  }
+  .contact-request, .contact-request-responded {
+    .contact-name {
+      padding-left: 10px;
+      padding-right: 20px;
+    }
+    .accept-request, .decline-request {
+      a {
+        border: 2px solid $navbarColor;
+        padding: 5px;
+      }
+      &:hover a {
+        border-color: black;
+      }
+      transition: 0.15s border-color;
+      transition: 0.15s background-color;
+    }
+    .accept-request {
+      a:hover {
+        background-color: black !important;
+      }
+      a {
+        background-color: $navbarColor;
+        color: white !important;
+      }
+    }
+    .decline-request {
+      a {
+        background-color: $backgroundColor;
+        color: black !important;
+      }
+      a:hover, &:hover {
+        background-color: white !important;
+      }
+    }
+    .accepted-request {
+      background: $navbarColor;
+      color: white;
+      padding: 5px;
+    }
+  }
+  .no-requests {
+    text-align: center;
+  }
+}
+
+#unresponded-contact-requests {
+  top: 0;
+  right: 5px;
+  background: #3F4EBF;
+}

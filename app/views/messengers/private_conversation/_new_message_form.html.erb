@@ -1,0 +1,6 @@
+<form class="send-private-message">
+  <input name="conversation_id" type="hidden" value="<%= conversation.id %>">
+  <input name="user_id" type="hidden" value="<%= user.id %>">
+  <textarea name="body" rows="2" class="form-control" placeholder="Type a message..."></textarea>
+  <input type="submit" class="btn btn-success send-message">
+</form>

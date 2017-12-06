@@ -1,0 +1,14 @@
+<div class="contact-request-status">
+  <div class="add-user-to-contacts-message">
+    <div>
+      <%= @recipient.name %> is not in your contacts
+    </div>
+    <div>
+      <%= link_to "Add to contacts", 
+                  contacts_path(contact_id: @recipient), 
+                  remote: true, 
+                  method: :post, 
+                  class: 'add-user-to-contacts-notif' %>
+    </div>
+  </div>   
+</div>

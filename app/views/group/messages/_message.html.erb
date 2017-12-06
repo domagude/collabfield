@@ -1,0 +1,9 @@
+<%= render partial: group_message_date_check_partial_path(message, 
+                                                          previous_message),
+           locals: { message: message } %>
+<li class="group-message">
+  <div class="row <%= seen_by_user? %>" data-seen-by="<%= group_message_seen_by(message) %>">
+    <%= render partial: message_content_partial_path(user, message, previous_message),
+               locals: { user: user, message: message } %>
+  </div>
+</li>

@@ -1,0 +1,20 @@
+<div class="contact-request-status" 
+     data-user-name="<%= @recipient.name %>">
+  <div class="contact-name">
+    <%= @recipient.name %> sent you a contact request
+  </div>
+  <div class="request-response">
+    <span class="accept-request">
+      <%= link_to "Accept",  
+          contact_path(id: @recipient.id), 
+          remote: true, 
+          method: "put" %>
+    </span>  
+    <span class="decline-request">
+      <%= link_to "Decline", 
+                  contact_path(id: @recipient.id), 
+                  remote: true, 
+                  method: :delete %>
+    </span>              
+  </div>
+</div>

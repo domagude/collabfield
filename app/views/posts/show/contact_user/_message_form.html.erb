@@ -1,0 +1,11 @@
+<%= form_tag({controller: "private/conversations", action: "create"},
+              method: "post",
+              remote: true) do %>
+  <%= hidden_field_tag(:post_id, @post.id)  %>
+  <%= text_area_tag(:message_body,
+                    nil,
+                    rows: 3,
+                    class: 'form-control', 
+                    placeholder: 'Send a messsage to the user') %>
+  <%= submit_tag('Send a message', class: 'btn send-message-to-user') %>
+<% end %>

@@ -1,0 +1,11 @@
+<% previous_message = nil %>
+
+<% @messages.reverse.each do |message| %>
+	<% if message.body != 'INITIAL_MESSAGE_FOR_SORTING' %>
+	  <%= render 'private/messages/message', 
+	  						user: @user,
+	  						message: message,
+	  						previous_message: previous_message %>
+	  <% previous_message = message %>
+  <% end %>
+<% end %>

@@ -1,0 +1,44 @@
+.edit-profile {
+  padding-top: 50px;
+  .update-btn {
+    color: white;
+    background: #323738;
+    border: 2px solid #323738;
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+  .delete-account {
+    width: auto !important;
+    margin-top: 100px;
+    color: white;
+    background: red;
+  }
+}
+
+.new-post, .edit-profile {
+  height: calc(100vh - 50px);
+  background-color: white;
+  h1 {
+    text-align: center;
+    margin: 25px 0;
+  }
+  input, textarea, select {
+    width: 100%;
+  }
+}
+
+.control-label {
+  display: none;
+}
+
+#messages-page-name {
+  font-size: 18px;
+  font-size: 1.8rem;
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+  color: white;
+}
+
