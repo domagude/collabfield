@@ -1,4 +1,4 @@
-<% private_conversations_windows.each do |conversation| %>
+<% @private_conversations_windows.each do |conversation| %>
   <%= render partial: "private/conversations/conversation",
              locals: { conversation: conversation, 
                        user: current_user } %>
